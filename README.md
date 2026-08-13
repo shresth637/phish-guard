@@ -1,6 +1,20 @@
 # AI Phishing Detector API 🛡️
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Try%20it%20now-brightgreen?style=for-the-badge)](https://phish-guard-green.vercel.app/docs)
+
 A lightning-fast, machine learning-powered API built with FastAPI that analyzes URLs and predicts whether they are safe or malicious (phishing).
+
+## 🌐 Live Demo
+Try the API right now, no setup required — open the interactive Swagger UI and test it with any URL:
+
+👉 **[https://phish-guard-green.vercel.app/docs](https://phish-guard-green.vercel.app/docs)**
+
+Or hit the endpoint directly:
+```bash
+curl -X POST https://phish-guard-green.vercel.app/api/predict \
+  -H "Content-Type: application/json" \
+  -d '{"url": "http://secure-update-paypal-account-login.com/auth"}'
+```
 
 This project was built to prioritize real-time inference speed and security. Instead of relying on slow, risky HTML web-scraping, the AI is trained exclusively on **15 lexical features** extracted directly from the URL string. It also implements an industry-standard **Defense in Depth** architecture using an Allowlist to bypass AI processing for known trusted domains, eliminating false positives for major platforms.
 
@@ -50,8 +64,8 @@ This project was built to prioritize real-time inference speed and security. Ins
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/shresth637/phishing-detactor.git
-   cd phishing-detactor
+   git clone https://github.com/shresth637/phish-guard.git
+   cd phish-guard
    ```
 
 2. Create a virtual environment and install dependencies:
